@@ -25,7 +25,7 @@ enum GameMusicRoute {
     }
 }
 
-class GameMusic {
+final class GameMusic {
     private var player: AVAudioPlayer?
     
     static let shared = GameMusic()
@@ -43,11 +43,6 @@ extension GameMusic {
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func stopGameMusic() {
-        player?.stop()
-        player = nil
     }
 }
 
